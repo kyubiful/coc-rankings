@@ -18,15 +18,20 @@ window.onload = () => {
         
         var table = document.getElementById(id);
 
+        var iterable = 0;
+
         for(team of teams){
+          iterable++;
           table.innerHTML+=`
               <tr>
+                <td>${iterable}</td>
                 <td>${team.nombre}</td>
-                <td>${team.clasificatorio}</td>
                 <td>${team.puntos}</td>
               </tr>
             `;
         }
+
+        iterable=0;
       }
     }
 
